@@ -1,0 +1,39 @@
+<div>
+    
+  <nav class="toolbar" role="banner">
+    <span>{{ appName }}</span>
+  </nav>
+
+  <div class="container">
+    <div class="output-container">
+      
+      <div class="chartName-output">
+        updated: <strong>{{ updated }}</strong>
+      </div> 
+
+      <div class="chartName-output">
+        ChartName: <strong>{{ chartName }}</strong>
+      </div>
+      <div class="usd-price-output">
+        BTC: <strong>{{ usdValue }}</strong> <small> USD</small>
+      </div>
+      <div class="rial-price-output">
+        BTC: <strong>{{ rialValueSep }}</strong> <small> Rial</small>
+      </div>      
+    </div>
+
+   
+
+    <input type="number" class="usd-price-input" [(ngModel)]="usdValueInput" placeholder="Enter USD price..." />
+
+
+
+
+    <button class="btn-convert" (click)="fetchPrice()">
+      Get Btc Price & Convert To Rial
+    </button>
+  </div>
+  <div style="color: green">
+    <small> RequestResult = </small> {{ RequestResult }}
+  </div>
+</div>
